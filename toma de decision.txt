@@ -1,0 +1,46 @@
+SI:
+JUBILADO
++75000
+-150000
+----------
+JUBILADO
++130000
+-150000
+----------
+TRABAJADOR
++75000
+-150000
+----------
+TRABAJADOR
++75000
++150000 || -350000
+----------
+TRABAJADOR
++130000
+SI TODOS
+----------
+PRINCIPIANTE
++75000
+-150000
+----------
+PRINCIPIANTE
++130000
+SI TODOS
+
+
+-150000
+1 año con +25%
+2 años con +50% 
+
+150000 && -350000
+2 años con +30%
+3 años con +50%
+
++500000
+3 años con 40%
+4 años con 60%
+5 años con 75%
+
+
+
+"Hola, su prestamo ha sido aceptado y le enviaremos las condiciones del mismo! \nEl Prestamo lo va a poder pagar en 1 año o en 2 años\nSi decide pagar en 1 año el monto total que va a pagar seria de: ".($_POST['monto']*0.25)+$_POST['monto']."\nPor lo tanto el valor de cada cuota seria de".(($_POST['monto']*0.25)+$_POST['monto'])/12.".\nSi decide pagar en 2 años el monto total que va a pagar seria de: ".($_POST['monto']*0.5)+$_POST['monto']."\nPor lo tanto el valor de cada cuota seria de".(($_POST['monto']*0.5)+$_POST['monto'])/12.".";

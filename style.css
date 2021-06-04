@@ -1,0 +1,541 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra de navegacion */
+nav{
+    background-color: rgb(153, 10, 53);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(212, 212, 212);
+
+}
+.nav-logo{
+    flex: 1;
+    padding-left: 10px;
+}
+.nav-items{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+.nav-link a{
+    text-decoration: none;
+    color: rgb(212, 212, 212);
+}
+
+.nav-link{
+    position: relative;
+}
+.nav-link::before,
+.nav-link::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: whitesmoke;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-out;
+}
+.nav-link:hover::before,
+.nav-link:hover::after{
+    transform: scaleX(1);
+}
+
+
+
+
+
+
+/* Contenido de la pagina */
+
+#banner{
+    width: 100%;
+    height: 60vh;
+    float: left;
+    background-image: url(img-banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#banner h1{
+    font-size: 45px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    padding-left: 40px;
+    background: linear-gradient(to right, rgb(156, 156, 156), rgb(153, 10, 53) );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animacion 1.5s ease-out ;
+}
+/*tarjetas*/
+
+.tarjetas{
+    background-color: rgb(212, 212, 212);
+    width: 100%;
+    height: 195vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: row;
+}
+/* card 1 */
+.card{
+    position: relative;
+    background-image: url(risas.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 10px;
+    left: 20%;
+    transform: translate(-20%);
+}
+.filtro p{
+    position: absolute;
+    top: 65vh;
+    left: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: whitesmoke;
+    transition: 1s ease-in-out;
+}
+.filtro h2{
+    position: absolute;
+    top: 60vh;
+    left: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: whitesmoke;
+    transition: 1s ease-in-out;
+}
+.filtro:hover> p{
+    font-size: 20px;
+    transform: translateY(-30px);
+}
+.filtro:hover> h2{
+    font-size: 25px;
+    transform: translateY(-30px);
+}
+.filtro{
+    width: 450px;
+    height: 80vh;
+    /*background-color: rgba(100, 148, 237, 0.685);*/
+    background: linear-gradient(to bottom, rgba(218, 218, 218, 0.658), rgba(39, 39, 39, 0.705) );
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* card 2 */
+.card-2{
+    position: relative;
+    background-image: url(pensar.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 10px;
+    top: 15vh;
+    left: 23%;
+    transform: translate(-23%);
+
+}
+.filtro-2 p{
+    position: absolute;
+    top: 65vh;
+    left: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: whitesmoke;
+    transition: 1s ease-in-out;
+}
+.filtro-2 h2{
+    position: absolute;
+    top: 60vh;
+    left: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: whitesmoke;
+    transition: 1s ease-in-out;
+}
+.filtro-2:hover> p{
+    font-size: 20px;
+    transform: translateY(-30px);
+}
+.filtro-2:hover> h2{
+    font-size: 25px;
+    transform: translateY(-30px);
+}
+.filtro-2{
+    width: 450px;
+    height: 80vh;
+    /*background-color: rgba(100, 148, 237, 0.685);*/
+    background: linear-gradient(to bottom, rgba(218, 218, 218, 0.658), rgba(153, 13, 13, 0.705) );
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* card 3 */
+.card-3{
+    position: relative;
+    background-image: url(trabajar.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 10px;
+    top: 84vh;
+    right: 60.9%;
+
+}
+.filtro-3 p{
+    position: absolute;
+    top: 65vh;
+    left: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: whitesmoke;
+    transition: 1s ease-in-out;
+}
+.filtro-3 h2{
+    position: absolute;
+    top: 60vh;
+    left: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: whitesmoke;
+    transition: 1s ease-in-out;
+}
+.filtro-3:hover> p{
+    font-size: 20px;
+    transform: translateY(-30px);
+}
+.filtro-3:hover> h2{
+    font-size: 25px;
+    transform: translateY(-30px);
+}
+.filtro-3{
+    width: 450px;
+    height: 80vh;
+    /*background-color: rgba(100, 148, 237, 0.685);*/
+    background: linear-gradient(to bottom, rgba(218, 218, 218, 0.658), rgba(34, 32, 145, 0.705) );
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* card 4 */
+.card-4{
+    position: relative;
+    background-image: url(datos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 10px;
+    top: 99vh;
+    left: -949px;
+    transform: translate(50%);
+    
+
+}
+.filtro-4 p{
+    position: absolute;
+    top: 65vh;
+    left: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: whitesmoke;
+    transition: 1s ease-in-out;
+}
+.filtro-4 h2{
+    position: absolute;
+    top: 60vh;
+    left: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: whitesmoke;
+    transition: 1s ease-in-out;
+}
+.filtro-4:hover> p{
+    font-size: 20px;
+    transform: translateY(-30px);
+}
+.filtro-4:hover> h2{
+    font-size: 25px;
+    transform: translateY(-30px);
+}
+.filtro-4{
+    width: 450px;
+    height: 80vh;
+    /*background-color: rgba(100, 148, 237, 0.685);*/
+    background: linear-gradient(to bottom, rgba(241, 241, 241, 0.658), rgba(153, 153, 153, 0.705) );
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* prestamo */
+
+#prestamo{
+    background: url(prestamo.jpg);
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+#prestamo h2{
+    background: rgba(0, 0, 0 , .5);
+    height: 30vh;
+    color: rgb(212, 212, 212);
+    font-family: 'Poppins', sans-serif;
+    padding: 80px;
+}
+#prestamo h2 a{
+    text-decoration: none;
+    color: rgb(153, 10, 53);
+}
+
+/* beneficio */
+
+#beneficios{
+    width: 100%;
+    height: 65vh;
+    background: rgb(153, 10, 53);
+    padding: 130px;
+    display: flex;
+    justify-content: space-around;
+}
+#beneficios #titulo{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 300vh;
+    font-family:'Poppins', sans-serif;
+    color: whitesmoke;
+    font-size: 30px;
+
+}
+
+/* tarjeta  1*/
+#beneficios .tarjeta-1{
+    height: 27vh;
+    width: 250px;
+    background: white;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.tarjeta-1 .img{
+    flex: 1;
+    cursor: pointer;
+}
+.img img{
+    width: 125px;
+    height: 27vh;
+}
+.tarjeta-1 .text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-family:'Poppins', sans-serif;
+    justify-content: center;
+    padding-left: 10px;
+    font-weight: bold;
+}
+.text .dcto{
+    font-size: 200%;
+}
+.text a{
+    text-decoration: none;
+
+}
+
+/*tarjeta 2*/
+#beneficios .tarjeta-2{
+    height: 27vh;
+    width: 250px;
+    background: white;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+.tarjeta-2 .img{
+    flex: 1;
+}
+.tarjeta-2 .text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-family:'Poppins', sans-serif;
+    justify-content: center;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+
+/*tarjeta 3*/
+#beneficios .tarjeta-3{
+    height: 27vh;
+    width: 250px;
+    background: white;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+.tarjeta-3 .img{
+    flex: 1;
+}
+.img h2{
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+    font-family:'Poppins', sans-serif;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    margin-left: 10px;
+    margin-top: 30px;
+    color: red;
+}
+.tarjeta-3 .text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-family:'Poppins', sans-serif;
+    justify-content: center;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+/*footer*/
+
+#footer{
+    height: 15vh;
+    width: 100%;
+    background: rgba(218, 218, 218);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer h2{
+    color: black;
+    font-size: 20px;
+    font-family:'Poppins', sans-serif;
+
+}
+@keyframes animacion {
+    0%{
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+/* segunda pagina */
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+}
+
+#form-prestamo{
+    width: 80%;
+    height: 110vh;
+    margin: auto;
+    margin-top: 10vh;
+    background-color: #E8F0FE;
+    display: flex;
+    border: 2px solid #e6edf8;
+    font-family:'Poppins', sans-serif;
+    font-weight: bolder;
+
+}
+.cont-for{
+    padding: 40px 70px; 
+}
+
+
+.persona{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    columns: 2;
+}
+.datos-trabajo{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    columns: 2; 
+}
+input{
+    width: 400px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(158, 8, 8) !important;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    outline-style: none;
+    font-size: 15px;
+}
+.boton{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#boton{
+    position: absolute;
+    top: 118vh;
+    margin: auto;
+    /*transform: translate(-50%);*/
+
+    height: 40px;
+    width: 120px;
+    border: none;
+    font-family:'Poppins', sans-serif;
+    background-color: rgb(153, 10, 53);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-weight: bolder;
+    cursor: pointer;
+    transition: .5s;
+}
+#boton:hover{
+    color: white;
+    transform: scale(1.2, 1.2);
+}
+
+.msjerror{
+    font-family:'Poppins', sans-serif;
+    height: 30vh;
+    width: 30%;
+    margin: auto;
+    font-size: 14px;
+}
